@@ -1,3 +1,6 @@
+body {
+  font-family: 'Helvetica Neue LT GEO';
+}
 .s-1 {
   background-color: $main-color3;
 
@@ -158,7 +161,7 @@
 
         & > .forgot-pass {
           & > a > p {
-            font-size: 20px;
+            font-size: 18px;
             color: $main-color1;
             text-decoration: underline;
             margin-bottom: 25px;
