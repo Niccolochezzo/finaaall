@@ -1,319 +1,390 @@
 section {
-    background-color: $main-color3;
-  
-    .container {
-      @extend %container;
-      text-align: center;
+  background-color: $main-color3;
+
+  .container {
+    @extend %container;
+    text-align: center;
+
+    .first-box {
       padding-top: 90px;
-  
-      .first-box {
-        & > a > img {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 56px;
-        }
-  
-        & > h5 {
-          color: $main-color1;
-          font-size: 40px;
-          margin-bottom: 25px;
-  
-          @media (max-width: $smart-break) {
-            font-size: 32px;
-          }
-  
-          @media (max-width: $other-break) {
-            font-size: 25px;
-          }
-        }
-  
-        & > h6 {
-          color: $main-color1;
-          font-size: 30px;
-          margin-bottom: 40px;
-  
-          & > a {
-            color: $main-color1;
-            text-decoration: underline;
-          }
-  
-          @media (max-width: $smart-break) {
-            font-size: 25px;
-          }
-  
-          @media (max-width: $other-break) {
-            font-size: 20px;
-          }
-        }
-      }
-  
-      .form-wrapper {
-        width: 620px;
-        margin: 0 auto;
-  
-        & > form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-  
-          & > input[type="email"] {
-            width: 600px;
-            padding: 13px 10px;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            margin-bottom: 30px;
-  
-            @media (max-width: $smart-break) {
-              width: 500px;
-              margin-bottom: 20px;
-            }
-  
-            @media (max-width: 550px) {
-              width: 380px;
-            }
-  
-            @media (max-width: $other-break) {
-              width: 240px;
-            }
-          }
-  
-          & > input[type="password"] {
-            width: 600px;
-            padding: 13px 10px;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            margin-bottom: 60px;
-  
-            @media (max-width: $smart-break) {
-              width: 500px;
-            }
-  
-            @media (max-width: 550px) {
-              width: 380px;
-              margin-bottom: 30px;
-            }
-  
-            @media (max-width: $other-break) {
-              width: 240px;
-            }
-          }
-  
-          & > input[type="submit"] {
-            width: 440px;
-            margin: 0 auto;
-            background-color: $main-color1;
-            color: white;
-            font-size: 20px;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 56px;
-            cursor: pointer;
-  
-            @media (max-width: $smart-break) {
-              width: 340px;
-            }
-  
-            @media (max-width: 550px) {
-              width: 220px;
-            }
-  
-            @media (max-width: $other-break) {
-              width: 150px;
-            }
-          }
-  
-          & > input::placeholder {
-            color: #27536b;
-          }
-        }
-  
-        @media (max-width: $smart-break) {
-          width: 530px;
-          margin: 0 auto;
-        }
-  
-        @media (max-width: 550px) {
-          width: 400px;
-        }
-  
+
+      & > a > img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 56px;
+
         @media (max-width: $other-break) {
-          width: 260px;
+          width: 45px;
+          height: 45px;
+          margin-bottom: 25px;
         }
       }
-  
-      .line-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 620px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-  
-        & > span {
-          border-bottom: 2px #707070 solid;
-          width: 270px;
-          display: block;
-  
-          @media (max-width: $smart-break) {
-            width: 200px;
-          }
-  
-          @media (max-width: 480px) {
-            width: 160px;
-          }
-        }
-  
-        & > p {
-          color: #112d32;
-          font-size: 22px;
-  
-          @media (max-width: 480px) {
-            font-size: 16px;
-          }
-        }
-  
+
+      & > h5 {
+        color: $main-color1;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 26px;
+        font-family: Helvetica;
+
         @media (max-width: $smart-break) {
-          width: 450px;
+          font-size: 32px;
         }
-  
-        @media (max-width: 480px) {
-          width: 260px;
+
+        @media (max-width: $other-break) {
+          font-size: 28px;
+          margin-bottom: 21px;
+          color: #d1ebeb;
         }
       }
-  
-      .second-box {
-        width: 620px;
-        margin: 0 auto;
-  
-        & > .first-strip {
-          @include flex-parms;
-          margin-bottom: 20px;
-  
-          & > button {
-            width: 300px;
-            padding: 10px 0;
-            border: none;
-            border-radius: 5px;
-            color: #665e5e;
-            font-size: 16px;
-            cursor: pointer;
-  
-            & > .fb-icon {
-              color: #4267b2;
-              font-size: 30px;
-              text-align: center;
-            }
-  
-            & > .google-icon {
-              color: #db4437;
-              font-size: 30px;
-              text-align: center;
-            }
-  
-            @media (max-width: $smart-break) {
-              width: 230px;
-              font-size: 14px;
-            }
-  
-            @media (max-width: 535px) {
-              width: 190px;
-              margin-bottom: 20px;
-            }
-          }
-  
-          @media (max-width: 535px) {
-              flex-direction: column;
+
+      & > h6 {
+        color: $main-color1;
+        font-size: 30px;
+        font-family: Helvetica;
+        margin-bottom: 60px;
+
+        & > a {
+          color: $main-color1;
+          text-decoration: underline;
+
+          @media (max-width: $other-break) {
+            color: #d1ebeb;
           }
         }
-  
+
+        @media (max-width: $smart-break) {
+          font-size: 25px;
+        }
+
+        @media (max-width: $other-break) {
+          width: 235px;
+          margin: 0 auto;
+          font-size: 18px;
+          color: #d1ebeb;
+        }
+      }
+
+      @media (max-width: $other-break) {
+        background-color: $main-color1;
+        padding-bottom: 23px;
+      }
+    }
+
+    .form-wrapper {
+      width: 620px;
+      margin: 0 auto;
+
+      & > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > input[type="email"] {
+          width: 600px;
+          font-size: 26px;
+          padding: 13px 10px;
+          border: none;
+          border-radius: 10px;
+          outline: none;
+          margin-bottom: 30px;
+
+          @media (max-width: $smart-break) {
+            width: 500px;
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 550px) {
+            width: 380px;
+          }
+
+          @media (max-width: $other-break) {
+            width: 334px;
+            margin-bottom: 28px;
+            font-size: 20px;
+          }
+
+          @media (max-width: 350px) {
+            width: 270px;
+          }
+        }
+
+        & > input[type="password"] {
+          width: 600px;
+          font-size: 26px;
+          padding: 13px 10px;
+          border: none;
+          border-radius: 10px;
+          outline: none;
+          margin-bottom: 60px;
+
+          @media (max-width: $smart-break) {
+            width: 500px;
+          }
+
+          @media (max-width: 550px) {
+            width: 380px;
+            margin-bottom: 30px;
+          }
+
+          @media (max-width: $other-break) {
+            width: 334px;
+            margin-bottom: 28px;
+            font-size: 20px;
+          }
+
+          @media (max-width: 350px) {
+            width: 270px;
+          }
+        }
+
+        & > input[type="submit"] {
+          width: 440px;
+          margin: 0 auto;
+          background-color: $main-color1;
+          color: white;
+          font-size: 20px;
+          font-family: Helvetica;
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+          margin-bottom: 63px;
+          cursor: pointer;
+
+          @media (max-width: $smart-break) {
+            width: 340px;
+          }
+
+          @media (max-width: 550px) {
+            width: 220px;
+          }
+
+          @media (max-width: $other-break) {
+            width: 211px;
+            margin-bottom: 42px;
+          }
+
+          @media (max-width: 350px) {
+            width: 170px;
+          }
+        }
+
+        & > input::placeholder {
+          color: #27536b;
+        }
+      }
+
+      @media (max-width: $smart-break) {
+        width: 530px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 565px) {
+        width: 400px;
+      }
+
+      @media (max-width: $other-break) {
+        width: 260px;
+        margin-top: 42px;
+      }
+    }
+
+    .line-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 762px;
+      margin: 0 auto;
+      margin-bottom: 59px;
+
+      & > span {
+        border-bottom: 1px #707070 solid;
+        width: 300px;
+        display: block;
+
+        @media (max-width: 814px) {
+          width: 270px;
+        }
+
+        @media (max-width: $smart-break) {
+          width: 200px;
+        }
+
+        @media (max-width: 480px) {
+          width: 140px;
+        }
+      }
+
+      & > p {
+        color: #112d32;
+        font-size: 22px;
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 814px) {
+        width: 600px;
+      }
+
+      @media (max-width: $smart-break) {
+        width: 450px;
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    .second-box {
+      width: 696px;
+      margin: 0 auto;
+
+      & > .first-strip {
+        @include flex-parms(center);
+        flex-wrap: wrap;
+
         & > button {
-          width: 300px;
-          padding: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 330px;
+          margin: 0 15px 27px 0;
+          padding: 10px 0;
           border: none;
           border-radius: 5px;
-          color: #665e5e;
-          font-size: 16px;
           cursor: pointer;
-          margin-bottom: 100px;
-  
-          & > i {
-            color: black;
+
+          & > span {
+            font-size: 20px;
+            color: #665e5e;
+
+            @media (max-width: 350px) {
+              font-size: 15px;
+            }
+          }
+
+          & > .fb-icon {
+            color: #4267b2;
             font-size: 40px;
             text-align: center;
           }
-  
-          @media (max-width: $smart-break) {
-            width: 230px;
-            font-size: 14px;
-          }
-  
-          @media (max-width: 535px) {
-              width: 190px;
-              margin-bottom: 20px;
-              font-size: 15px;
-            }
-        }
-  
-        @media (max-width: $smart-break) {
-          width: 500px;
-          margin: 0 auto;
-        }
-  
-        @media (max-width: 535px) {
-          width: 270px;
-        }
-      }
-    }
-  }
-  
-  footer {
-    background-color: $main-color1;
-  
-    & > .container {
-      @extend %container;
-      padding: 50px 0;
-      display: flex;
-      justify-content: space-between;
-  
-      & > .content {
-        width: 290px;
-        text-align: center;
-        & > h2 {
-          color: white;
-          font-size: 30px;
-          margin-bottom: 20px;
-  
-          @media (max-width: $other-break) {
-              font-size: 24px;
-              margin-left: 14px;
-            }
-        }
-  
-        & > .icon {
-          & > a > i {
-            color: white;
+
+          & > .google-icon {
+            color: #db4437;
             font-size: 40px;
-            margin-left: 20px;
+            text-align: center;
+          }
+
+          & > i {
+            color: black;
+            font-size: 45px;
+            text-align: center;
+          }
+
+          @media (max-width: $other-break) {
+            width: 334px;
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 350px) {
+            width: 270px;
           }
         }
-  
-        @media (max-width: 535px) {
-          width: 240px;
+
+        & > button:last-child {
+          margin-bottom: 150px;
+
+          @media (max-width: $other-break) {
+            margin-bottom: 65px;
+          }
         }
-  
-        @media (max-width: $other-break) {
-          margin-top: 15px;
-          text-align: left;
-        }
-      }
-  
-      @media (max-width: $other-break) {
+
+        @media (max-width: $smart-break) {
           flex-direction: column;
         }
+      }
+
+      @media (max-width: $smart-break) {
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 535px) {
+        width: 400px;
+      }
+
+      @media (max-width: $other-break) {
+        width: 340px;
+      }
+
+      @media (max-width: 350px) {
+        width: 280px;
+      }
+    }
+
+    @media (max-width: $other-break) {
+      width: 100%;
     }
   }
-  
+}
+
+.footer-wrapper {
+  background-color: $main-color1;
+
+  .container {
+    @extend %container;
+    padding: 50px 0;
+    @include flex-parms;
+
+    & > a > img {
+      @media (max-width: $other-break) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .content {
+      width: 290px;
+      text-align: center;
+
+      & > h2 {
+        color: white;
+        font-size: $h5;
+        margin-bottom: 20px;
+
+        @media (max-width: $other-break) {
+          font-size: 18px;
+          margin-left: 14px;
+        }
+      }
+
+      .icon {
+        & > a > img {
+          margin-left: 20px;
+
+          @media (max-width: $other-break) {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+      @media (max-width: 535px) {
+        width: 240px;
+      }
+
+      @media (max-width: $other-break) {
+        flex-direction: column;
+        margin-top: 15px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: $other-break) {
+      flex-direction: column;
+    }
+  }
+}
