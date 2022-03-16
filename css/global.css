@@ -278,7 +278,7 @@ a {
 @media (max-width: 350px) {
   .darkmode .wrapper .dark h5 {
     font-size: 15px;
-    margin-right: 15px;
+    margin-right: 15spx;
   }
 }
 
