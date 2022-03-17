@@ -2,54 +2,180 @@
     font-family: 'Helvetica Neue LT GEO';
 }
 .profile {
-    .header {
-        background: $main-color1;
-        
-        .wrapper {
+    .header-wrapper {
+        background-color: $main-color1;
 
-            max-width: $container-size;
-            width: 100%;
-            margin: 0 auto;
-            padding-bottom: 100px;
-            padding-top: 50px;
-            .upper {
+        .container {
+            @extend %container;
+            padding: 60px 0;
+
+            .wrapper {
                 @include flex-parms;
-    
+                position: relative;
+
                 .logo {
-                    display:flex;
-                    align-items:flex-start;
-    
-                    img {
-                        width: 80px;
-                        height: 80px;
-                    }
-    
-                    h1 {
-                        font-size: $h1;
-                        font-weight: bold;
-                        color: $main-color3;
+                    @include flex-parms;
+                    margin-bottom: 30px;
+
+                    &>li {
+                        &>h1 {
+                            vertical-align: middle;
+                            font-size: $h1;
+                            color: $main-color3;
+                            font-weight: bold;
+
+                            @media (max-width: $other-break) {
+                                margin-top: 30px;
+                            }
+                        }
                     }
                 }
-    
-                a {
-                    font-size: 25px;
-                    color: $main-color3;
+
+                .menu-ul {
+                    @include flex-parms;
+
+                    &>li {
+                        &>.nav-a {
+                            font-size: $h6;
+                            margin-left: 10px;
+                            color: $main-color3;
+
+                            @media (max-width: $other-break) {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .burger-icon {
+                    display: none;
                 }
             }
-    
-            .bottom {
-                margin-top: 15px;
-                margin-left: 12px;
-    
-                h3 {
-                    font-size: $h3;
-                    color: $main-color3;
-                    margin-bottom: 114px;
+
+            &>h3 {
+                font-size: $h3;
+                color: $main-color3;
+                margin-bottom: 115px;
+            }
+
+            &>h5 {
+                font-size: $h5;
+                color: $main-color3;
+            }
+        }
+
+        @media (max-width: $smart-break) {
+            .container {
+                .wrapper {
+
+                    .logo {
+                        display: inline-block;
+
+                        &>li {
+                            display: inline-block;
+                            vertical-align: middle;
+
+                            &>h1 {
+                                font-size: 34px;
+                            }
+                        }
+                    }
+
+                    .menu-ul {
+                        display: none;
+
+                        &>li {
+                            &>.nav-a {
+                                display: block;
+                                font-size: $p;
+                                line-height: 30px;
+
+                            }
+                        }
+                    }
+
+                    &>.burger-icon {
+                        color: $main-color3;
+                        display: block;
+                        font-size: 25px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+                    }
+
+
+                    &>.menu-ul.open-menu {
+                        display: block;
+                    }
                 }
-    
-                p {
-                    font-size: $h5;
-                    color: $main-color3;
+
+                &>h3 {
+                    font-size: 22px;
+                    margin-bottom: 75px;
+                }
+
+                &>h5 {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        @media (max-width:380px) {
+            .container {
+                .wrapper {
+
+                    .logo {
+                        display: inline-block;
+
+                        &>li {
+                            &>a>img {
+                                width: 45px;
+                                height: 45px;
+                            }
+
+                            &>h1 {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .menu-ul {
+                        display: none;
+
+                        &>li {
+                            &>.nav-a {
+                                display: block;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    &>.burger-icon {
+                        color: $main-color3;
+                        display: block;
+                        font-size: 30px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+                    }
+
+
+                    &>.menu-ul.open-menu {
+                        display: block;
+                    }
+                }
+
+                &>h3 {
+                    font-size: 22px;
+                    margin-bottom: 50px;
+                }
+
+                &>h5 {
+                    font-size: 18px;
+                    line-height: 22px;
                 }
             }
         }
@@ -218,6 +344,7 @@
                                 display: block;
                                 width: 700px;
                                 border-radius: 20px;
+                                color: $main-color1;
 
                                 @media (max-width: 1200px){
                                     width: 600px;
@@ -284,32 +411,49 @@
                 font-size: $h5;
                 margin-bottom: 20px;
 
-                @media (max-width: $other-break) {
-                    font-size: 24px;
-                    margin-left: 14px;
-                }
             }
 
             .icon {
 
                 &>a>img {
                     margin-left: 20px;
+
                 }
             }
+        }
+    }
 
-            @media (max-width: 535px) {
-                width: 240px;
+    @media (max-width:$other-break) {
+        .container {
+            display: block;
+
+            &>a>img {
+                margin-bottom: 20px;
+                margin-left: 7px;
             }
 
-            @media (max-width: $other-break) {
-                flex-direction: column;
-                margin-top: 15px;
-                text-align: center;
+            .content {
+                display: block;
+                text-align: left;
+
+                &>h5 {
+                    font-size: 18px;
+
+                }
+
+                .icon {
+
+                    margin-left: 14px;
+
+                    &>a>img {
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 0;
+
+                    }
+                }
             }
         }
 
-        @media (max-width: $other-break) {
-            flex-direction: column;
-        }
     }
 }
