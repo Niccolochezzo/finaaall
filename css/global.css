@@ -3008,6 +3008,7 @@ section .container .second-box > .first-strip > button:last-child {
   .footer-wrapper .container .content > h5 {
     font-size: 18px;
     margin-left: 12px;
+    font-weight: bold;
   }
   .footer-wrapper .container .content .icon {
     margin-left: 14px;
