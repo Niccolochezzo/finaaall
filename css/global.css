@@ -1224,7 +1224,7 @@ section .container .form-wrapper > form > input[type="password"] {
   border: none;
   border-radius: 10px;
   outline: none;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -1251,6 +1251,64 @@ section .container .form-wrapper > form > input[type="password"] {
 @media (max-width: 350px) {
   section .container .form-wrapper > form > input[type="password"] {
     width: 270px;
+  }
+}
+
+section .container .form-wrapper > form > #Successfully {
+  margin-top: 20px;
+  width: 600px;
+  font-size: 15px;
+  color: #009900;
+  display: block;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  section .container .form-wrapper > form > #Successfully {
+    width: 450px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  section .container .form-wrapper > form > #Successfully {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  section .container .form-wrapper > form > #Successfully {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+
+section .container .form-wrapper > form > #error {
+  margin-top: 20px;
+  width: 600px;
+  font-size: 17px;
+  color: #db4437;
+  display: block;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  section .container .form-wrapper > form > #error {
+    width: 450px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  section .container .form-wrapper > form > #error {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  section .container .form-wrapper > form > #error {
+    width: 200px;
+    font-size: 14px;
   }
 }
 
@@ -2735,7 +2793,7 @@ section .container .second-box > .first-strip > button:last-child {
 @media (max-width: 350px) {
   .darkmode .wrapper .dark h5 {
     font-size: 15px;
-    margin-right: 15spx;
+    margin-right: 15px;
   }
 }
 
